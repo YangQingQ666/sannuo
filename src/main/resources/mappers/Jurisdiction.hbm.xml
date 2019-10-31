@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-10-16 16:24:38 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.xr.entity">
+    <class name="Jurisdiction" table="TB_JURISDICTION">
+        <id name="jid" type="int">
+            <column name="JID" />
+            <generator class="native" />
+        </id>
+        <property name="jname" type="java.lang.String">
+            <column name="JNAME" />
+        </property>
+         <property name="partid">
+            <column name="PARTID" />
+        </property>
+        <one-to-one name="newJurisdiction" class="com.xr.entity.Jurisdiction" lazy="false"></one-to-one>
+        <property name="url" type="java.lang.String">
+            <column name="URL" />
+        </property>
+        <property name="icon" type="java.lang.String">
+            <column name="ICON" />
+        </property>
+         <property name="state" >
+            <column name="STATE" />
+        </property>
+    </class>
+</hibernate-mapping>

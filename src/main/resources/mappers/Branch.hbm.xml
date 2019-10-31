@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-10-26 11:13:51 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping default-lazy="false">
+    <class name="com.xr.entity.Branch" table="TB_BRANCH">
+        <id name="bid"  >
+            <column name="BID" />
+            <generator class="native" />
+        </id>
+        <one-to-one name="cids" class="com.xr.entity.Customer"></one-to-one>
+        <property name="bname" type="java.lang.String">
+            <column name="BNAME" />
+        </property>
+        <property name="partid" type="java.lang.Integer">
+            <column name="PARTID" />
+        </property>
+        <property name="province" type="java.lang.String">
+            <column name="PROVINCE" />
+        </property>
+        <property name="city" type="java.lang.String">
+            <column name="CITY" />
+        </property>
+        <property name="county" type="java.lang.String">
+            <column name="COUNTY" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        <property name="gname" type="java.lang.String">
+            <column name="GNAME" />
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="PHONE" />
+        </property>
+        <property name="type" type="int">
+            <column name="TYPE" />
+        </property>
+    </class>
+</hibernate-mapping>

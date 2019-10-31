@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-10-16 16:24:38 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping  default-lazy="false">
+    <class name="com.xr.entity.Role" table="ROLE">
+        <id name="roleid" type="int">
+            <column name="ROLEID" />
+            <generator class="native" />
+        </id>
+        <property name="rolename" type="java.lang.String">
+            <column name="ROLENAME" />
+        </property>
+         <property name="comment" type="java.lang.String">
+            <column name="COMMENT" />
+        </property>
+        <property name="state" type="java.lang.String">
+            <column name="STATE" />
+        </property>
+    </class>
+</hibernate-mapping>

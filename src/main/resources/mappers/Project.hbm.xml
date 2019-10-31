@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-10-26 11:13:51 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.xr.entity" default-lazy="false">
+    <class  name="Project" table="TB_PROJECT">
+        <id name="did" type="java.lang.Integer">
+            <column name="DID" />
+            <generator class="native" />
+        </id>
+        <property name="dname" type="java.lang.String">
+            <column name="DNAME" />
+        </property>
+        <property name="unit" type="java.lang.String">
+            <column name="UNIT" />
+        </property>
+        <property name="reference" type="java.lang.String">
+            <column name="REFERENCE" />
+        </property>
+        <property name="method">
+            <column name="METHOD" />
+        </property>
+        <property name="intervarl" type="java.lang.String">
+            <column name="INTERVARL" />
+        </property>
+        <property name="unscramble" type="java.lang.String">
+            <column name="UNSCRAMBLE" />
+        </property>
+        <many-to-one name="newBranch" class="com.xr.entity.Branch" fetch="join">
+            <column name="bid" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

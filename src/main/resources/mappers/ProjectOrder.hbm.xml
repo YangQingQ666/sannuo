@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-10-26 11:13:51 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping  default-lazy="false">
+    <class name="com.xr.entity.ProjectOrder" table="TB_PROJECT_ORDER">
+        <id name="oid" type="long">
+            <column name="OID" />
+            <generator class="native" />
+        </id>
+        <list name="newCustomer" inverse="false" table="TB_CUSTOMER">
+            <key>
+                <column name="cid" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="com.xr.entity.Customer" />
+        </list>
+        <list name="newProject" inverse="false" table="PROJECT" lazy="true">
+            <key>
+                <column name="did" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="com.xr.entity.Project" />
+        </list>
+        <property name="result" type="java.lang.String">
+            <column name="RESULT" />
+        </property>
+        <property name="time" type="java.sql.Date">
+            <column name="TIME" />
+        </property>
+    </class>
+</hibernate-mapping>

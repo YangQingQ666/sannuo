@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<package name="mypack" extends="struts-default">
+		<global-allowed-methods>regex:.*</global-allowed-methods>
+		<action name="bossAction*" class="bossAction" method="{1}">
+			<result name="success" type="dispatcher">index.jsp</result>
+		</action>
+		<action name="branchAction*" class="com.xr.action.BranchAction"
+			method="{1}">
+			<result name="success" type="dispatcher">index.jsp</result>
+		</action>
+		<action name="jurisdictionAction*" class="jurisdictionAction"
+			method="{1}">
+			<result name="success" type="dispatcher">index.jsp</result>
+		</action>
+		<action name="customerAction*" class="com.xr.action.CustomerAction"
+			method="{1}">
+			<result name="success" type="dispatcher">index.jsp</result>
+		</action>
+		<action name="projectAction*" class="com.xr.action.ProjectAction"
+			method="{1}">
+			<result name="success" type="dispatcher">index.jsp</result>
+		</action>
+		<action name="projectOrderAction*" class="com.xr.action.ParojectOrderAction"
+			method="{1}">
+			<result name="success" type="dispatcher">index.jsp</result>
+		</action>
+		<action name="testerAction*" class="com.xr.action.TesterAction"
+			method="{1}">
+			<result name="success" type="dispatcher">tester.jsp</result>
+		</action>
+		<action name="jlAction*" class="com.xr.action.JlAction" method="{1}">
+			<result name="success" type="dispatcher">index.jsp</result>
+		</action>
+
+		<action name="roleJurisdictionAction*" method="{1}"
+			class="roleJurisdictionAction">
+			<result name="success" type="dispatcher">loging/project_add.jsp</result>
+			<result name="error">loging/project_list.jsp</result>
+		</action>
+		<action name="roleAction*" method="{1}" class="roleAction">
+			<result name="success" type="dispatcher">index.jsp</result>
+		</action>
+	</package>
+</struts>

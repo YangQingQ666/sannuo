@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-10-29 15:07:26 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping default-lazy="false">
+    <class name="com.xr.entity.JL" table="TB_JL">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="cid" type="java.lang.Integer">
+            <column name="CID" />
+        </property>
+        <one-to-one name="cids" class="com.xr.entity.Customer"></one-to-one>
+        <property name="dgc" type="java.lang.String">
+            <column name="DGC" />
+        </property>
+        <property name="ssy" type="java.lang.String">
+            <column name="SSY" />
+        </property>
+        <property name="szy" type="java.lang.String">
+            <column name="SZY" />
+        </property>
+        <property name="xtang" type="java.lang.String">
+            <column name="XTANG" />
+        </property>
+        <property name="gysc" type="java.lang.String">
+            <column name="GYSZ" />
+        </property>
+        <property name="xhdb" type="java.lang.String">
+            <column name="XHDB" />
+        </property>
+        <property name="xnc" type="java.lang.String">
+            <column name="XNS" />
+        </property>
+        <property name="xton" type="java.lang.String">
+            <column name="XTON" />
+        </property>
+        <property name="commont" type="java.lang.String">
+            <column name="COMMONT" />
+        </property>
+        <property name="time" >
+            <column name="TIME" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-10-16 16:24:38 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping >
+    <class name="com.xr.entity.UserRole" table="USERROLE">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="newRole" class="com.xr.entity.Role" fetch="join">
+            <column name="NEWROLE" />
+        </many-to-one>
+        <many-to-one name="newBranch" class="com.xr.entity.Branch" fetch="join">
+            <column name="NEWBRANCH" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

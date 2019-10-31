@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-10-29 15:07:26 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping default-lazy="false">
+    <class name="com.xr.entity.Customer" table="TB_CUSTOMER">
+        <id name="cid" >
+            <column name="CID" />
+            <generator class="assigned" />
+        </id>
+        <one-to-one name="jl" class="com.xr.entity.JL"></one-to-one>
+        <one-to-one name="bids" class="com.xr.entity.Branch"></one-to-one>
+        <many-to-one name="branch" class="com.xr.entity.Branch" fetch="join">
+            <column name="BID" />
+        </many-to-one>
+        <property name="cname" type="java.lang.String">
+            <column name="CNAME" />
+        </property>
+        <property name="csex" type="java.lang.String">
+            <column name="CSEX" />
+        </property>
+        <property name="cage" type="int">
+            <column name="CAGE" />
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="PHONE" />
+        </property>
+        <property name="identificationcad" type="java.lang.String">
+            <column name="IDENTIFICATIONCAD" />
+        </property>
+        <property name="count" type="int">
+            <column name="COUNT" />
+        </property>
+        <property name="lasttime" type="java.util.Date">
+            <column name="LASTTIME" />
+        </property>
+    </class>
+</hibernate-mapping>
